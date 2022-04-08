@@ -8,12 +8,17 @@ body{
     margin: 0;
     background-size: cover;
 }
-input[type=text], input[type=number],select{
+input[type=text], input[type=number], input[type=checkbox],textarea, select{
     position: absolute;
     transform: translate(-50%, -50%);
     border: none;
     border-bottom: 1px solid black;
     background:transparent;
+}
+textarea{
+    font-size: 18px;
+    resize: none;
+    text-align: left;
 }
 .characterName{
     left: 17vw;
@@ -159,4 +164,486 @@ input[type=text], input[type=number],select{
     height: 2vw;
     text-align: center;
     font-size: 30px;
+}
+.inspiration{
+    left: 16vw;
+    top: 23vw;
+    width: 2vw;
+    height: 3vw;    
+}
+.proficiencyBonus{
+    left: 17vw;
+    top: 29vw;
+    width: 5vw;
+    height: 4vw;
+    text-align: center;
+    font-size: 30px
+}
+.savingThrows input[type=checkbox]
+{
+    width: 1vw;
+    height: 1vw;
+}
+.savingThrows input[type=number]{
+    width: 5vw;
+    height: 2vw;
+    text-align: center;
+    font-size: 20px;
+}
+.check_strST{
+    left: 16vw;
+    top: 35vw;
+}
+.num_strST{
+    left: 19vw;
+    top: 35vw;
+}
+.check_dexST{
+    left: 16vw;
+    top: 37vw;
+}
+.num_dexST{
+    left: 19vw;
+    top: 37vw;
+}
+.check_conST{
+    left: 16vw;
+    top: 39vw;
+}
+.num_conST{
+    left: 19vw;
+    top: 39vw;
+}
+.check_intST{
+    left: 16vw;
+    top: 41vw;
+}
+.num_intST{
+    left: 19vw;
+    top: 41vw;
+}
+.check_wisST{
+    left: 16vw;
+    top: 44vw;
+}
+.num_wisST{
+    left: 19vw;
+    top: 44vw;
+}
+.check_chaST{
+    left: 16vw;
+    top: 46vw;
+}
+.num_chaST{
+    left: 19vw;
+    top: 46vw;
+}
+.skills input[type=checkbox]
+{
+    width: 1vw;
+    height: 1vw;
+}
+.skills input[type=number]{
+    width: 5vw;
+    height: 2vw;
+    text-align: center;
+    font-size: 20px;
+}
+.check_acrobatics{
+    left: 16vw;
+    top: 54vw;
+}
+.num_acrobatics{
+    left: 19vw;
+    top: 54vw;
+}
+.check_animalH{
+    left: 16vw;
+    top: 56vw;
+}
+.num_animalH{
+    left: 19vw;
+    top: 56vw;
+}
+.check_arcana{
+    left: 16vw;
+    top: 58vw;
+}
+.num_arcana{
+    left: 19vw;
+    top: 58vw;
+}
+.check_athletics{
+    left: 16vw;
+    top: 60vw;
+}
+.num_athletics{
+    left: 19vw;
+    top: 60vw;
+}
+.check_deception{
+    left: 16vw;
+    top: 62vw;
+}
+.num_deception{
+    left: 19vw;
+    top: 62vw;
+}
+.check_history{
+    left: 16vw;
+    top: 65vw;
+}
+.num_history{
+    left: 19vw;
+    top: 65vw;
+}
+.check_insight{
+    left: 16vw;
+    top: 67vw;
+}
+.num_insight{
+    left: 19vw;
+    top: 67vw;
+}
+.check_intimidation{
+    left: 16vw;
+    top: 69vw;
+}
+.num_intimidation{
+    left: 19vw;
+    top: 69vw;
+}
+.check_investigation{
+    left: 16vw;
+    top: 71vw;
+}
+.num_investigation{
+    left: 19vw;
+    top: 71vw;
+}
+.check_medicine{
+    left: 16vw;
+    top: 73vw;
+}
+.num_medicine{
+    left: 19vw;
+    top: 73vw;
+}
+.check_nature{
+    left: 16vw;
+    top: 76vw;
+}
+.num_nature{
+    left: 19vw;
+    top: 76vw;
+}
+.check_perception{
+    left: 16vw;
+    top: 78vw;
+}
+.num_perception{
+    left: 19vw;
+    top: 78vw;
+}
+.check_performance{
+    left: 16vw;
+    top: 80vw;
+}
+.num_performance{
+    left: 19vw;
+    top: 80vw;
+}
+.check_persuasion{
+    left: 16vw;
+    top: 82vw;
+}
+.num_persuasion{
+    left: 19vw;
+    top: 82vw;
+}
+.check_religion{
+    left: 16vw;
+    top: 85vw;
+}
+.num_religion{
+    left: 19vw;
+    top: 85vw;
+}
+.check_sleightOfHand{
+    left: 16vw;
+    top: 87vw;
+}
+.num_sleightOfHand{
+    left: 19vw;
+    top: 87vw;
+}
+.check_stealth{
+    left: 16vw;
+    top: 89vw;
+}
+.num_stealth{
+    left: 19vw;
+    top: 89vw;
+}
+.check_survival{
+    left: 16vw;
+    top: 91vw;
+}
+.num_survival{
+    left: 19vw;
+    top: 91vw;
+}
+.passiveWis{
+    left: 7vw;
+    top: 99vw;
+    width: 5vw;
+    height: 4vw;
+    text-align: center;
+    font-size: 30px;
+}
+.otherPLanguages{
+    left: 18vw;
+    top: 114vw;
+    width: 27vw;
+    height: 21vw;
+}
+.armorClass{
+    left: 40vw;
+    top: 26vw;
+    width: 5vw;
+    height: 4vw;
+    text-align: right;
+    font-size: 30px;
+}
+.initiative{
+    left: 49vw;
+    top: 26vw;
+    width: 5vw;
+    height: 4vw;
+    text-align: center;
+    font-size: 30px;
+}
+.speed{
+    left: 59vw;
+    top: 26vw;
+    width: 5vw;
+    height: 4vw;
+    text-align: right;
+    font-size: 30px;
+}
+.hitpointM{
+    left: 49vw;
+    top: 33vw;
+    width: 4vw;
+    height: 2vw;
+    text-align: right;
+    font-size: 20px;
+}
+.hitpointA{
+    left: 49vw;
+    top: 38vw;
+    width: 10vw;
+    height: 4vw;
+    text-align: center;
+    font-size: 50px;
+}
+.hitpointT{
+    left: 49vw;
+    top: 47vw;
+    width: 10vw;
+    height: 4vw;
+    text-align: center;
+    font-size: 50px;
+}
+.deathS input[type=checkbox]
+{
+    width: 1vw;
+    height: 1vw;
+}
+.succOne{
+    left: 56vw;
+    top: 54vw;
+}
+.succTwo{
+    left: 58vw;
+    top: 54vw;
+}
+.succThree{
+    left: 60vw;
+    top: 54vw;
+}
+.failOne{
+    left: 56vw;
+    top: 56vw;
+}
+.failTwo{
+    left: 58vw;
+    top: 56vw;
+}
+.failThree{
+    left: 60vw;
+    top: 56vw;
+}
+.hitDLevel{
+    left: 41vw;
+    top: 53vw;
+}
+.hitDicesT{
+    left: 45vw;
+    top: 53vw;
+}
+.pd{
+    position: absolute;
+    left: 43vw;
+    top: 51vw;
+}
+.hitDice{
+    left: 42vw;
+    top: 56vw;
+    width: 6vw;
+    height: 4vw;
+    text-align: center;
+    font-size: 30px;
+}
+.nameFr{
+    left: 41vw;
+    top: 66vw;
+    width: 10vw;
+    height: 2vw;
+    text-align: left;
+    font-size: 17px;
+}
+.atkFr{
+    left: 49vw;
+    top: 66vw;
+    width: 4vw;
+    height: 2vw;
+    text-align: left;
+    font-size: 17px;
+}
+.typeFr{
+    left: 58vw;
+    top: 66vw;
+    width: 10vw;
+    height: 2vw;
+    text-align: left;
+    font-size: 17px;
+}
+.nameSr{
+    left: 41vw;
+    top: 70vw;
+    width: 10vw;
+    height: 2vw;
+    text-align: left;
+    font-size: 17px;
+}
+.atkSr{
+    left: 49vw;
+    top: 70vw;
+    width: 4vw;
+    height: 2vw;
+    text-align: left;
+    font-size: 17px;
+}
+.typeSr{
+    left: 58vw;
+    top: 70vw;
+    width: 10vw;
+    height: 2vw;
+    text-align: left;
+    font-size: 17px;
+}
+.nameTr{
+    left: 41vw;
+    top: 73vw;
+    width: 10vw;
+    height: 2vw;
+    text-align: left;
+    font-size: 17px;
+}
+.atkTr{
+    left: 49vw;
+    top: 73vw;
+    width: 4vw;
+    height: 2vw;
+    text-align: left;
+    font-size: 17px;
+}
+.typeTr{
+    left: 58vw;
+    top: 73vw;
+    width: 10vw;
+    height: 2vw;
+    text-align: left;
+    font-size: 17px;
+}
+.atkspellText{
+    left: 49vw;
+    top: 84vw;
+    width: 27vw;
+    height: 19vw;
+}
+.equipText{
+    left: 53vw;
+    top: 111vw;
+    width: 20vw;
+    height: 27vw;
+}
+
+.currency, input[type=number]{
+    width: 4vw;
+    height: 2vw;
+    text-align: right;
+    font-size: 20px;
+}
+
+.copperP{
+    left: 39vw;
+    top: 100vw;  
+}
+.silverP{
+    left: 39vw;
+    top: 104vw;  
+}
+.electrumP{
+    left: 39vw;
+    top: 109vw;  
+}
+.goldP{
+    left: 39vw;
+    top: 113vw;  
+}
+.platinumP{
+    left: 39vw;
+    top: 117vw;  
+}
+.pTraits{
+    left: 81vw;
+    top: 27vw;
+    width: 25vw;
+    height: 8vw;
+}
+.ideals{
+    left: 81vw;
+    top: 37vw;
+    width: 25vw;
+    height: 6vw;
+}
+.bonds{
+    left: 81vw;
+    top: 47vw;
+    width: 25vw;
+    height: 5vw;
+}
+.flaws{
+    left: 81vw;
+    top: 56vw;
+    width: 25vw;
+    height: 5vw;
+}
+.featuresAndTraits{
+    left: 81vw;
+    top: 94vw;
+    width: 27vw;
+    height: 60vw;
 }

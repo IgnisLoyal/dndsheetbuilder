@@ -1,4 +1,5 @@
 <html>
+
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Quick Sheet builder</title>
@@ -6,15 +7,15 @@
 </head>
 
 <body>
-    <div class="toprow">
-        <form>
-        <label for ="characterName"></label>
+    <form>
+        <div class="toprow"></div>
+        <label for="characterName"></label>
         <input class="characterName" type="text" id="characterName" name="characterName">
         <label for="playerName"></label>
         <input class="playerName" type="text" id="playerName" name="playerName">
         <label for="experience"></label>
         <input class="experience" type="text" id="experience" name="experience">
-            </form>
+
         <select class="class" name="class" id="class">
             <option value="0"></option>
             <option value="1">Barbaro</option>
@@ -29,7 +30,7 @@
             <option value="10">Monge</option>
             <option value="11">Paladino</option>
             <option value="12">Paladino</option>
-            </select>
+        </select>
         <select class="level" name="level" id="level">
             <option value="0"></option>
             <option value="1">Level 1</option>
@@ -52,7 +53,7 @@
             <option value="18">Level 18</option>
             <option value="19">Level 19</option>
             <option value="20">Level 20</option>
-            </select>
+        </select>
         <select class="background" name="background" id="background">
             <option value="0"></option>
             <option value="1">Acólito</option>
@@ -68,8 +69,8 @@
             <option value="11">Orfão</option>
             <option value="12">Sábio</option>
             <option value="13">Soldado</option>
-            </select>
-        <select class="races" name="races" id="races" >
+        </select>
+        <select class="races" name="races" id="races">
             <option value="0"></option>
             <option value="1">Anão</option>
             <option value="2">Elfo</option>
@@ -80,7 +81,7 @@
             <option value="7">Meio-Elfo</option>
             <option value="8">Meio-Orc</option>
             <option value="9">Tiefling</option>
-            </select>
+        </select>
         <select class="alignment" name="alignment" id="alignment">
             <option value="0"></option>
             <option value="1">Leal e Bom (LB)</option>
@@ -92,39 +93,240 @@
             <option value="7">Leal e Mau (LM)</option>
             <option value="8">Neutro e Mau (NM)</option>
             <option value="9">Caótico e Mau (CM)</option>
-            </select>
-            </div>
-            
-    <div class="status">
-        <form> 
-            <label for="strength"></label>
-                <input class="strength" type="number" id="strength" name="strength">
-                    <label for="strMod"></label>
-                        <input class="strMod" type="text" id="strMod" readonly>
-            <label for="dexterity"></label>
-                <input class="dexterity" type="number" id="dexterity" name="dexterity">
-                    <label for="dexMod"></label>
-                        <input class="dexMod" type="text" id="dexMod" readonly>
-            <label for="constitution"></label>
-                <input class="constitution" type="number" id="constitution" name="constitution">
-                    <label for="conMod"></label>
-                        <input class="conMod" type="text" id="conMod" readonly>
-            <label for="intelligence"></label>
-                <input class="intelligence" type="number" id="intelligence" name="intelligence">
-                    <label for="intMod"></label>
-                        <input class="intMod" type="text" id="intMod" readonly>
-            <label for="wisdom"></label>
-                <input class="wisdom" type="number" id="wisdom" name="wisdom">
-                    <label for="wisMod"></label>
-                        <input class="wisMod" type="text" id="wisMod" readonly>
-            <label for="charisma"></label>
-                <input class="charisma" type="number" id="charisma" name="charisma">
-                    <label for="chaMod"></label>
-                        <input class="chaMod" type="text" id="chaMod" readonly>
-                                                    
-            <form>
+        </select>
         </div>
-        <script src="statusCounter.js">counter()</script>
-</body> 
+        <div class="firstColumn">
+            <div class="status">
+                <label for="strength"></label>
+                <input class="strength" type="number" id="strength" name="strength">
+                <label for="strMod"></label>
+                <input class="strMod" type="text" id="strMod">
+                <label for="dexterity"></label>
+                <input class="dexterity" type="number" id="dexterity" name="dexterity">
+                <label for="dexMod"></label>
+                <input class="dexMod" type="text" id="dexMod">
+                <label for="constitution"></label>
+                <input class="constitution" type="number" id="constitution" name="constitution">
+                <label for="conMod"></label>
+                <input class="conMod" type="text" id="conMod">
+                <label for="intelligence"></label>
+                <input class="intelligence" type="number" id="intelligence" name="intelligence">
+                <label for="intMod"></label>
+                <input class="intMod" type="text" id="intMod">
+                <label for="wisdom"></label>
+                <input class="wisdom" type="number" id="wisdom" name="wisdom">
+                <label for="wisMod"></label>
+                <input class="wisMod" type="text" id="wisMod">
+                <label for="charisma"></label>
+                <input class="charisma" type="number" id="charisma" name="charisma">
+                <label for="chaMod"></label>
+                <input class="chaMod" type="text" id="chaMod">
+            </div>
+            <div class="passiveWisdom">
+                <label for="passiveWisdom"></label>
+                <input class="passiveWis" type="number" id="passiveWis">
+            </div>
+            <div class="inspiration">
+                <label for="inspiration"></label>
+                <input class="inspiration" type="checkbox" id="inspiration">
+            </div>
+            <div class="proficiencyBonus">
+                <label for="proficiencyBonus"></label>
+                <input class="proficiencyBonus" type="number" id="profiencyBonus">
+            </div>
+            <div class="savingThrows">
+                <Label for="strST"></Label>
+                <input class="check_strST" type="checkbox" id="check_strST">
+                <input class="num_strST" type="number" id="num_strST">
+                <Label for="dexST"></Label>
+                <input class="check_dexST" type="checkbox" id="check_dexST">
+                <input class="num_dexST" type="number" id="num_dexST">
+                <Label for="conST"></Label>
+                <input class="check_conST" type="checkbox" id="check_conST">
+                <input class="num_conST" type="number" id="num_conST">
+                <Label for="intST"></Label>
+                <input class="check_intST" type="checkbox" id="check_intST">
+                <input class="num_intST" type="number" id="num_intST">
+                <Label for="wisST"></Label>
+                <input class="check_wisST" type="checkbox" id="check_wisST">
+                <input class="num_wisST" type="number" id="num_wisST">
+                <Label for="chaST"></Label>
+                <input class="check_chaST" type="checkbox" id="check_chaST">
+                <input class="num_chaST" type="number" id="num_chaST">
+            </div>
+            <div class="skills">
+                <Label for="acrobatics"></Label>
+                <input class="check_acrobatics" type="checkbox" id="check_acrobatics">
+                <input class="num_acrobatics" type="number" id="num_acrobatics">
+                <Label for="animalHandling"></Label>
+                <input class="check_animalH" type="checkbox" id="check_animalH">
+                <input class="num_animalH" type="number" id="num_animalH">
+                <Label for="arcana"></Label>
+                <input class="check_arcana" type="checkbox" id="check_arcana">
+                <input class="num_arcana" type="number" id="num_arcana">
+                <Label for="athletics"></Label>
+                <input class="check_athletics" type="checkbox" id="check_athletics">
+                <input class="num_athletics" type="number" id="num_athletics">
+                <Label for="deception"></Label>
+                <input class="check_deception" type="checkbox" id="check_deception">
+                <input class="num_deception" type="number" id="num_deception">
+                <Label for="history"></Label>
+                <input class="check_history" type="checkbox" id="check_history">
+                <input class="num_history" type="number" id="num_history">
+                <Label for="insight"></Label>
+                <input class="check_insight" type="checkbox" id="check_insight">
+                <input class="num_insight" type="number" id="num_insight">
+                <Label for="intimidation"></Label>
+                <input class="check_intimidation" type="checkbox" id="check_intimidation">
+                <input class="num_intimidation" type="number" id="num_intimidation">
+                <Label for="investigation"></Label>
+                <input class="check_investigation" type="checkbox" id="check_investigation">
+                <input class="num_investigation" type="number" id="num_investigation">
+                <Label for="medicine"></Label>
+                <input class="check_medicine" type="checkbox" id="check_medicine">
+                <input class="num_medicine" type="number" id="num_medicine">
+                <Label for="nature"></Label>
+                <input class="check_nature" type="checkbox" id="check_nature">
+                <input class="num_nature" type="number" id="num_nature">
+                <Label for="perception"></Label>
+                <input class="check_perception" type="checkbox" id="check_perception">
+                <input class="num_perception" type="number" id="num_perception">
+                <Label for="performance"></Label>
+                <input class="check_performance" type="checkbox" id="check_performance">
+                <input class="num_performance" type="number" id="num_performance">
+                <Label for="persuasion"></Label>
+                <input class="check_persuasion" type="checkbox" id="check_persuasion">
+                <input class="num_persuasion" type="number" id="num_persuasion">
+                <Label for="religion"></Label>
+                <input class="check_religion" type="checkbox" id="check_religion">
+                <input class="num_religion" type="number" id="num_religion">
+                <Label for="sleightOfHand"></Label>
+                <input class="check_sleightOfHand" type="checkbox" id="check_sleightOfHand">
+                <input class="num_sleightOfHand" type="number" id="num_sleightOfHand">
+                <Label for="stealth"></Label>
+                <input class="check_stealth" type="checkbox" id="check_stealth">
+                <input class="num_stealth" type="number" id="num_stealth">
+                <Label for="survival"></Label>
+                <input class="check_survival" type="checkbox" id="check_survival">
+                <input class="num_survival" type="number" id="num_survival">
+            </div>
+            <div class="otherPLanguages">
+                <textarea class="otherPLanguages" rows="12" cols="30"></textarea>
+            </div>
+        </div>
+        <div class="secondColumn">
+            <div class="armorC">
+                <label for="armorClass"></label>
+                <input class="armorClass" type="number" id="armorClass" name="armorClass">
+            </div>
+            <div class="init">
+                <label for="initiative"></label>
+                <input class="initiative" type="number" id="initiative" name="initiative">
+            </div>
+            <div class="spd">
+                <label for="speed"></label>
+                <input class="speed" type="number" id="speed" name="speed">
+            </div>
+            <div class="hitpoints">
+                <label for="hitpointM"></label>
+                <input class="hitpointM" type="number" id="hitpointM" name="hitpointM">
+                <label for="hitpointA"></label>
+                <input class="hitpointA" type="number" id="hitpointA" name="hitpointA">
+                <label for="hitpointT"></label>
+                <input class="hitpointT" type="number" id="hitpointT" name="hitpointT">
+            </div>
+            <div class="hitDie">
+                <label for="hitDLevel"></label>
+                <select class="hitDLevel" id="hitDLevel" name="hitDLevel">
+                    <option value="0"></option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">10</option>
+                    <option value="11">11</option>
+                    <option value="12">12</option>
+                    <option value="13">13</option>
+                    <option value="14">14</option>
+                    <option value="15">15</option>
+                    <option value="16">16</option>
+                    <option value="17">17</option>
+                    <option value="18">18</option>
+                    <option value="19">19</option>
+                    <option value="20">20</option>
+                </select>
+                <p class="pd">d</p>
+                <select class="hitDicesT" id="hitDicesT" name="hitDicesT">
+                    <option value="0"></option>
+                    <option value="1">6</option>
+                    <option value="2">8</option>
+                    <option value="3">10</option>
+                    <option value="4">12</option>
+                </select>
+                <label for="hitDice"></label>
+                <input class="hitDice" type="text" id="hitDice" name="hitDice">
+            </div>
+            <div class="deathS">
+                <label for="deathSaves"></label>
+                <input class="succOne" type="checkbox" id="succOne" name="succOne">
+                <input class="succTwo" type="checkbox" id="succTwo" name="succTwo">
+                <input class="succThree" type="checkbox" id="succThree" name="succThree">
+                <input class="failOne" type="checkbox" id="failOne" name="failOne">
+                <input class="failTwo" type="checkbox" id="failTwo" name="failTwo">
+                <input class="failThree" type="checkbox" id="failThree" name="failThree">
+            </div>
+            <div class="atkspellC">
+                <label for="firstRow"></label>
+                <input class="nameFr" type="text" id="nameFr" name="nameFr">
+                <input class="atkFr" type="text" id="atkFr" name="atkFr">
+                <input class="typeFr" type="text" id="typeFr" name="typeFr">
+                <label for="SecondRow"></label>
+                <input class="nameSr" type="text" id="nameSr" name="nameSr">
+                <input class="atkSr" type="text" id="atkSr" name="atkSr">
+                <input class="typeSr" type="text" id="typeSr" name="typeSr">
+                <label for="ThirdRow"></label>
+                <input class="nameTr" type="text" id="nameTr" name="nameTr">
+                <input class="atkTr" type="text" id="atkTr" name="atkTr">
+                <input class="typeTr" type="text" id="typeTr" name="typeTr">
+            </div>
+            <div class="atkspellT">
+                <textarea class="atkspellText"></textarea>
+            </div>
+            <div class="equip">
+                <div class="currency">
+                    <label for="coins"></label>
+                    <input class="copperP" type="number" id="copperP" name="copperP">
+                    <input class="silverP" type="number" id="silverP" name="silverP">
+                    <input class="electrumP" type="number" id="electrumP" name="electrumP">
+                    <input class="goldP" type="number" id="goldP" name="goldP">
+                    <input class="platinumP" type="number" id="platinumP" name="platinumP">
+                </div>
+                <textarea class="equipText"></textarea>
+            </div>
+        </div>
+        <div class="thirdColumn">
+            <div class="pTraitsD">
+                <textarea class="pTraits"></textarea>
+            </div>
+            <div class="idealsD">
+                <textarea class="ideals"></textarea>
+            </div>
+            <div class="bondsD">
+                <textarea class="bonds"></textarea>
+            </div>
+            <div class="flawsD">
+                <textarea class="flaws"></textarea>
+            </div>
+            <div class="fAndT">
+                <textarea class="featuresAndTraits"></textarea>
+            </div>
+        </div>
+    </form>
+</body>
 
 </html>
