@@ -1,4 +1,4 @@
-body{
+form {
     display: block;
     background-image: url("page1.jpg");
     background-repeat: no-repeat;
@@ -8,68 +8,82 @@ body{
     margin: 0;
     background-size: cover;
 }
-input[type=text], input[type=number], input[type=checkbox],textarea, select{
+
+input[type=text],
+input[type=number],
+input[type=checkbox],
+textarea,
+select {
     position: absolute;
     transform: translate(-50%, -50%);
     border: none;
     border-bottom: 1px solid black;
-    background:transparent;
+    background: transparent;
 }
-textarea{
+
+textarea {
     font-size: 18px;
     resize: none;
     text-align: left;
 }
-.characterName{
+
+.characterName {
     left: 17vw;
     top: 12vw;
     width: 15vw;
     height: 2vw;
 }
-.playerName{
+
+.playerName {
     left: 85vw;
     top: 9vw;
     width: 14vw;
     height: 2vw;
 }
-.experience{
+
+.experience {
     left: 85vw;
     top: 13vw;
     width: 14vw;
     height: 2vw;
 }
 
-.class{
+.class {
     left: 47vw;
     top: 9vw;
     width: 6vw;
     height: 2vw;
 }
-.level{
+
+.level {
     left: 53vw;
     top: 9vw;
     width: 6vw;
     height: 2vw;
 }
-.background{
+
+.background {
     left: 67vw;
     top: 9vw;
     width: 10vw;
     height: 2vw;
 }
-.races{
+
+.races {
     left: 47vw;
     top: 13vw;
     width: 6vw;
     height: 2vw;
 }
-.alignment{
+
+.alignment {
     left: 67vw;
     top: 13vw;
     width: 10vw;
     height: 2vw;
 }
-.strength{
+
+.strength {
     left: 9vw;
     top: 28vw;
     width: 5vw;
@@ -77,7 +91,8 @@ textarea{
     text-align: center;
     font-size: 30px;
 }
-.strMod{
+
+.strMod {
     left: 8vw;
     top: 32vw;
     width: 3vw;
@@ -85,7 +100,8 @@ textarea{
     text-align: center;
     font-size: 30px;
 }
-.dexterity{
+
+.dexterity {
     left: 9vw;
     top: 40vw;
     width: 5vw;
@@ -93,7 +109,8 @@ textarea{
     text-align: center;
     font-size: 30px;
 }
-.dexMod{
+
+.dexMod {
     left: 8vw;
     top: 44vw;
     width: 3vw;
@@ -101,7 +118,8 @@ textarea{
     text-align: center;
     font-size: 30px;
 }
-.constitution{
+
+.constitution {
     left: 9vw;
     top: 52vw;
     width: 5vw;
@@ -109,7 +127,8 @@ textarea{
     text-align: center;
     font-size: 30px;
 }
-.conMod{
+
+.conMod {
     left: 8vw;
     top: 56vw;
     width: 3vw;
@@ -117,7 +136,8 @@ textarea{
     text-align: center;
     font-size: 30px;
 }
-.intelligence{
+
+.intelligence {
     left: 9vw;
     top: 64vw;
     width: 5vw;
@@ -125,7 +145,8 @@ textarea{
     text-align: center;
     font-size: 30px;
 }
-.intMod{
+
+.intMod {
     left: 8vw;
     top: 67vw;
     width: 3vw;
@@ -133,7 +154,8 @@ textarea{
     text-align: center;
     font-size: 30px;
 }
-.wisdom{
+
+.wisdom {
     left: 9vw;
     top: 75vw;
     width: 5vw;
@@ -141,7 +163,8 @@ textarea{
     text-align: center;
     font-size: 30px;
 }
-.wisMod{
+
+.wisMod {
     left: 8vw;
     top: 79vw;
     width: 3vw;
@@ -149,7 +172,8 @@ textarea{
     text-align: center;
     font-size: 30px;
 }
-.charisma{
+
+.charisma {
     left: 9vw;
     top: 87vw;
     width: 5vw;
@@ -157,7 +181,8 @@ textarea{
     text-align: center;
     font-size: 30px;
 }
-.chaMod{
+
+.chaMod {
     left: 8vw;
     top: 91vw;
     width: 3vw;
@@ -165,13 +190,15 @@ textarea{
     text-align: center;
     font-size: 30px;
 }
-.inspiration{
+
+.inspiration {
     left: 16vw;
     top: 23vw;
     width: 2vw;
-    height: 3vw;    
+    height: 3vw;
 }
-.proficiencyBonus{
+
+.proficiencyBonus {
     left: 17vw;
     top: 29vw;
     width: 5vw;
@@ -179,221 +206,272 @@ textarea{
     text-align: center;
     font-size: 30px
 }
-.savingThrows input[type=checkbox]
-{
+
+.savingThrows input[type=checkbox] {
     width: 1vw;
     height: 1vw;
 }
-.savingThrows input[type=number]{
+
+.savingThrows input[type=number] {
     width: 5vw;
     height: 2vw;
     text-align: center;
     font-size: 20px;
 }
-.check_strST{
+
+.check_strST {
     left: 16vw;
     top: 35vw;
 }
-.num_strST{
+
+.num_strST {
     left: 19vw;
     top: 35vw;
 }
-.check_dexST{
+
+.check_dexST {
     left: 16vw;
     top: 37vw;
 }
-.num_dexST{
+
+.num_dexST {
     left: 19vw;
     top: 37vw;
 }
-.check_conST{
+
+.check_conST {
     left: 16vw;
     top: 39vw;
 }
-.num_conST{
+
+.num_conST {
     left: 19vw;
     top: 39vw;
 }
-.check_intST{
+
+.check_intST {
     left: 16vw;
     top: 41vw;
 }
-.num_intST{
+
+.num_intST {
     left: 19vw;
     top: 41vw;
 }
-.check_wisST{
+
+.check_wisST {
     left: 16vw;
     top: 44vw;
 }
-.num_wisST{
+
+.num_wisST {
     left: 19vw;
     top: 44vw;
 }
-.check_chaST{
+
+.check_chaST {
     left: 16vw;
     top: 46vw;
 }
-.num_chaST{
+
+.num_chaST {
     left: 19vw;
     top: 46vw;
 }
-.skills input[type=checkbox]
-{
+
+.skills input[type=checkbox] {
     width: 1vw;
     height: 1vw;
 }
-.skills input[type=number]{
+
+.skills input[type=number] {
     width: 5vw;
     height: 2vw;
     text-align: center;
     font-size: 20px;
 }
-.check_acrobatics{
+
+.check_acrobatics {
     left: 16vw;
     top: 54vw;
 }
-.num_acrobatics{
+
+.num_acrobatics {
     left: 19vw;
     top: 54vw;
 }
-.check_animalH{
+
+.check_animalH {
     left: 16vw;
     top: 56vw;
 }
-.num_animalH{
+
+.num_animalH {
     left: 19vw;
     top: 56vw;
 }
-.check_arcana{
+
+.check_arcana {
     left: 16vw;
     top: 58vw;
 }
-.num_arcana{
+
+.num_arcana {
     left: 19vw;
     top: 58vw;
 }
-.check_athletics{
+
+.check_athletics {
     left: 16vw;
     top: 60vw;
 }
-.num_athletics{
+
+.num_athletics {
     left: 19vw;
     top: 60vw;
 }
-.check_deception{
+
+.check_deception {
     left: 16vw;
     top: 62vw;
 }
-.num_deception{
+
+.num_deception {
     left: 19vw;
     top: 62vw;
 }
-.check_history{
+
+.check_history {
     left: 16vw;
     top: 65vw;
 }
-.num_history{
+
+.num_history {
     left: 19vw;
     top: 65vw;
 }
-.check_insight{
+
+.check_insight {
     left: 16vw;
     top: 67vw;
 }
-.num_insight{
+
+.num_insight {
     left: 19vw;
     top: 67vw;
 }
-.check_intimidation{
+
+.check_intimidation {
     left: 16vw;
     top: 69vw;
 }
-.num_intimidation{
+
+.num_intimidation {
     left: 19vw;
     top: 69vw;
 }
-.check_investigation{
+
+.check_investigation {
     left: 16vw;
     top: 71vw;
 }
-.num_investigation{
+
+.num_investigation {
     left: 19vw;
     top: 71vw;
 }
-.check_medicine{
+
+.check_medicine {
     left: 16vw;
     top: 73vw;
 }
-.num_medicine{
+
+.num_medicine {
     left: 19vw;
     top: 73vw;
 }
-.check_nature{
+
+.check_nature {
     left: 16vw;
     top: 76vw;
 }
-.num_nature{
+
+.num_nature {
     left: 19vw;
     top: 76vw;
 }
-.check_perception{
+
+.check_perception {
     left: 16vw;
     top: 78vw;
 }
-.num_perception{
+
+.num_perception {
     left: 19vw;
     top: 78vw;
 }
-.check_performance{
+
+.check_performance {
     left: 16vw;
     top: 80vw;
 }
-.num_performance{
+
+.num_performance {
     left: 19vw;
     top: 80vw;
 }
-.check_persuasion{
+
+.check_persuasion {
     left: 16vw;
     top: 82vw;
 }
-.num_persuasion{
+
+.num_persuasion {
     left: 19vw;
     top: 82vw;
 }
-.check_religion{
+
+.check_religion {
     left: 16vw;
     top: 85vw;
 }
-.num_religion{
+
+.num_religion {
     left: 19vw;
     top: 85vw;
 }
-.check_sleightOfHand{
+
+.check_sleightOfHand {
     left: 16vw;
     top: 87vw;
 }
-.num_sleightOfHand{
+
+.num_sleightOfHand {
     left: 19vw;
     top: 87vw;
 }
-.check_stealth{
+
+.check_stealth {
     left: 16vw;
     top: 89vw;
 }
-.num_stealth{
+
+.num_stealth {
     left: 19vw;
     top: 89vw;
 }
-.check_survival{
+
+.check_survival {
     left: 16vw;
     top: 91vw;
 }
-.num_survival{
+
+.num_survival {
     left: 19vw;
     top: 91vw;
 }
-.passiveWis{
+
+.passiveWis {
     left: 7vw;
     top: 99vw;
     width: 5vw;
@@ -401,13 +479,15 @@ textarea{
     text-align: center;
     font-size: 30px;
 }
-.otherPLanguages{
+
+.otherPLanguages {
     left: 18vw;
     top: 114vw;
     width: 27vw;
     height: 21vw;
 }
-.armorClass{
+
+.armorClass {
     left: 40vw;
     top: 26vw;
     width: 5vw;
@@ -415,7 +495,8 @@ textarea{
     text-align: right;
     font-size: 30px;
 }
-.initiative{
+
+.initiative {
     left: 49vw;
     top: 26vw;
     width: 5vw;
@@ -423,7 +504,8 @@ textarea{
     text-align: center;
     font-size: 30px;
 }
-.speed{
+
+.speed {
     left: 59vw;
     top: 26vw;
     width: 5vw;
@@ -431,7 +513,8 @@ textarea{
     text-align: right;
     font-size: 30px;
 }
-.hitpointM{
+
+.hitpointM {
     left: 49vw;
     top: 33vw;
     width: 4vw;
@@ -439,7 +522,8 @@ textarea{
     text-align: right;
     font-size: 20px;
 }
-.hitpointA{
+
+.hitpointA {
     left: 49vw;
     top: 38vw;
     width: 10vw;
@@ -447,7 +531,8 @@ textarea{
     text-align: center;
     font-size: 50px;
 }
-.hitpointT{
+
+.hitpointT {
     left: 49vw;
     top: 47vw;
     width: 10vw;
@@ -455,49 +540,59 @@ textarea{
     text-align: center;
     font-size: 50px;
 }
-.deathS input[type=checkbox]
-{
+
+.deathS input[type=checkbox] {
     width: 1vw;
     height: 1vw;
 }
-.succOne{
+
+.succOne {
     left: 56vw;
     top: 54vw;
 }
-.succTwo{
+
+.succTwo {
     left: 58vw;
     top: 54vw;
 }
-.succThree{
+
+.succThree {
     left: 60vw;
     top: 54vw;
 }
-.failOne{
+
+.failOne {
     left: 56vw;
     top: 56vw;
 }
-.failTwo{
+
+.failTwo {
     left: 58vw;
     top: 56vw;
 }
-.failThree{
+
+.failThree {
     left: 60vw;
     top: 56vw;
 }
-.hitDLevel{
+
+.hitDLevel {
     left: 41vw;
     top: 53vw;
 }
-.hitDicesT{
+
+.hitDicesT {
     left: 45vw;
     top: 53vw;
 }
-.pd{
+
+.pd {
     position: absolute;
     left: 43vw;
     top: 51vw;
 }
-.hitDice{
+
+.hitDice {
     left: 42vw;
     top: 56vw;
     width: 6vw;
@@ -505,7 +600,8 @@ textarea{
     text-align: center;
     font-size: 30px;
 }
-.nameFr{
+
+.nameFr {
     left: 41vw;
     top: 66vw;
     width: 10vw;
@@ -513,7 +609,8 @@ textarea{
     text-align: left;
     font-size: 17px;
 }
-.atkFr{
+
+.atkFr {
     left: 49vw;
     top: 66vw;
     width: 4vw;
@@ -521,7 +618,8 @@ textarea{
     text-align: left;
     font-size: 17px;
 }
-.typeFr{
+
+.typeFr {
     left: 58vw;
     top: 66vw;
     width: 10vw;
@@ -529,7 +627,8 @@ textarea{
     text-align: left;
     font-size: 17px;
 }
-.nameSr{
+
+.nameSr {
     left: 41vw;
     top: 70vw;
     width: 10vw;
@@ -537,7 +636,8 @@ textarea{
     text-align: left;
     font-size: 17px;
 }
-.atkSr{
+
+.atkSr {
     left: 49vw;
     top: 70vw;
     width: 4vw;
@@ -545,7 +645,8 @@ textarea{
     text-align: left;
     font-size: 17px;
 }
-.typeSr{
+
+.typeSr {
     left: 58vw;
     top: 70vw;
     width: 10vw;
@@ -553,7 +654,8 @@ textarea{
     text-align: left;
     font-size: 17px;
 }
-.nameTr{
+
+.nameTr {
     left: 41vw;
     top: 73vw;
     width: 10vw;
@@ -561,7 +663,8 @@ textarea{
     text-align: left;
     font-size: 17px;
 }
-.atkTr{
+
+.atkTr {
     left: 49vw;
     top: 73vw;
     width: 4vw;
@@ -569,7 +672,8 @@ textarea{
     text-align: left;
     font-size: 17px;
 }
-.typeTr{
+
+.typeTr {
     left: 58vw;
     top: 73vw;
     width: 10vw;
@@ -577,71 +681,83 @@ textarea{
     text-align: left;
     font-size: 17px;
 }
-.atkspellText{
+
+.atkspellText {
     left: 49vw;
     top: 84vw;
     width: 27vw;
     height: 19vw;
 }
-.equipText{
+
+.equipText {
     left: 53vw;
     top: 111vw;
     width: 20vw;
     height: 27vw;
 }
 
-.currency, input[type=number]{
+.currency,
+input[type=number] {
     width: 4vw;
     height: 2vw;
     text-align: right;
     font-size: 20px;
 }
 
-.copperP{
+.copperP {
     left: 39vw;
-    top: 100vw;  
+    top: 100vw;
 }
-.silverP{
+
+.silverP {
     left: 39vw;
-    top: 104vw;  
+    top: 104vw;
 }
-.electrumP{
+
+.electrumP {
     left: 39vw;
-    top: 109vw;  
+    top: 109vw;
 }
-.goldP{
+
+.goldP {
     left: 39vw;
-    top: 113vw;  
+    top: 113vw;
 }
-.platinumP{
+
+.platinumP {
     left: 39vw;
-    top: 117vw;  
+    top: 117vw;
 }
-.pTraits{
+
+.pTraits {
     left: 81vw;
     top: 27vw;
     width: 25vw;
     height: 8vw;
 }
-.ideals{
+
+.ideals {
     left: 81vw;
     top: 37vw;
     width: 25vw;
     height: 6vw;
 }
-.bonds{
+
+.bonds {
     left: 81vw;
     top: 47vw;
     width: 25vw;
     height: 5vw;
 }
-.flaws{
+
+.flaws {
     left: 81vw;
     top: 56vw;
     width: 25vw;
     height: 5vw;
 }
-.featuresAndTraits{
+
+.featuresAndTraits {
     left: 81vw;
     top: 94vw;
     width: 27vw;
