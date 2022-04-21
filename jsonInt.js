@@ -29,6 +29,12 @@ const deleteSheet = (index) => {
 const isValidFields = () => {
     return document.querySelector('#form').reportValidity()
 }
+const isCheckHandled = (selected) => {
+    if (value == "yes") {
+        console.log('')
+        return selected
+    }
+}
 // fields to be filled in the form
 const saveSheet = () => {
     if (isValidFields()) {
@@ -135,7 +141,7 @@ const saveSheet = () => {
             nameTr: document.querySelector('#nameTr').value,
             atkTr: document.querySelector('#atkTr').value,
             typeTr: document.querySelector('#typeTr').value,
-            atkspellText: document.querySelector('#atkspellText').value,
+            atkSpellText: document.querySelector('#atkSpellText').value,
             //coins
             copperP: document.querySelector('#copperP').value,
             silverP: document.querySelector('#silverP').value,
@@ -211,6 +217,17 @@ const editDelete = (event) => {
 }
 
 updateTable() */
+// set the value of the checkboxes in the form
+function isChecked(el) {
+    document.querySelector('input[type = checkbox]').value = true
+}
+
+function sendHome() {
+    window.location = 'index.html'
+}
+function sendSheets() {
+    window.location = 'sheets.html'
+}
 
 //Events
 //Save interaction with the form
