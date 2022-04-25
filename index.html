@@ -4,98 +4,99 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Quick Sheet builder</title>
     <link rel="stylesheet" href="stylednd.css">
+
 </head>
 
 <body>
     <form id="form">
-        <div class="toprow"></div>
-        <label for="characterName"></label>
-        <input class="characterName" type="text" id="characterName" name="characterName">
-        <label for="playerName"></label>
-        <input class="playerName" type="text" id="playerName" name="playerName">
-        <label for="experience"></label>
-        <input class="experience" type="text" id="experience" name="experience">
+        <div class="toprow">
+            <label for="characterName"></label>
+            <input class="characterName" type="text" id="characterName" name="characterName" required>
+            <label for="playerName"></label>
+            <input class="playerName" type="text" id="playerName" name="playerName">
+            <label for="experience"></label>
+            <input class="experience" type="text" id="experience" name="experience">
 
-        <select class="class" name="class" id="class">
-            <option value="0"></option>
-            <option value="1">Barbaro</option>
-            <option value="2">Bardo</option>
-            <option value="3">Bruxo</option>
-            <option value="4">Clérigo</option>
-            <option value="5">Druida</option>
-            <option value="6">Feiticeiro</option>
-            <option value="7">Guerreiro</option>
-            <option value="8">Ladino</option>
-            <option value="9">Mago</option>
-            <option value="10">Monge</option>
-            <option value="11">Paladino</option>
-            <option value="12">Paladino</option>
-        </select>
-        <select class="level" name="level" id="level">
-            <option value="0"></option>
-            <option value="1">Level 1</option>
-            <option value="2">Level 2</option>
-            <option value="3">Level 3</option>
-            <option value="4">Level 4</option>
-            <option value="5">Level 5</option>
-            <option value="6">Level 6</option>
-            <option value="7">Level 7</option>
-            <option value="8">Level 8</option>
-            <option value="9">Level 9</option>
-            <option value="10">Level 10</option>
-            <option value="11">Level 11</option>
-            <option value="12">Level 12</option>
-            <option value="13">Level 13</option>
-            <option value="14">Level 14</option>
-            <option value="15">Level 15</option>
-            <option value="16">Level 16</option>
-            <option value="17">Level 17</option>
-            <option value="18">Level 18</option>
-            <option value="19">Level 19</option>
-            <option value="20">Level 20</option>
-        </select>
-        <select class="background" name="background" id="background">
-            <option value="0"></option>
-            <option value="1">Acólito</option>
-            <option value="2">Artesão de Guilda</option>
-            <option value="3">Artista</option>
-            <option value="4">Charlatão</option>
-            <option value="5">Criminoso</option>
-            <option value="6">Eremita</option>
-            <option value="7">Forasteiro</option>
-            <option value="8">Herói do povo</option>
-            <option value="9">Marinheiro</option>
-            <option value="10">Nobre</option>
-            <option value="11">Orfão</option>
-            <option value="12">Sábio</option>
-            <option value="13">Soldado</option>
-        </select>
-        <select class="races" name="races" id="races">
-            <option value="0"></option>
-            <option value="1">Anão</option>
-            <option value="2">Elfo</option>
-            <option value="3">Halfling</option>
-            <option value="4">Humano</option>
-            <option value="5">Draconato</option>
-            <option value="6">Gnomo</option>
-            <option value="7">Meio-Elfo</option>
-            <option value="8">Meio-Orc</option>
-            <option value="9">Tiefling</option>
-        </select>
-        <select class="alignment" name="alignment" id="alignment">
-            <option value="0"></option>
-            <option value="1">Leal e Bom (LB)</option>
-            <option value="2">Neutro e Bom (NB)</option>
-            <option value="3">Caótico e Bom (CB)</option>
-            <option value="4">Leal e Neutro (LN)</option>
-            <option value="5">Neutro (N)</option>
-            <option value="6">Caótico e Neutro (CN)</option>
-            <option value="7">Leal e Mau (LM)</option>
-            <option value="8">Neutro e Mau (NM)</option>
-            <option value="9">Caótico e Mau (CM)</option>
-        </select>
+            <select class="class" name="class" id="class">
+                <option value="0"></option>
+                <option value="Barbaro">Barbaro</option>
+                <option value="Bardo">Bardo</option>
+                <option value="Bruxo">Bruxo</option>
+                <option value="Clérigo">Clérigo</option>
+                <option value="Druida">Druida</option>
+                <option value="Feiticeiro">Feiticeiro</option>
+                <option value="Guerreiro">Guerreiro</option>
+                <option value="Ladino">Ladino</option>
+                <option value="Mago">Mago</option>
+                <option value="Monge">Monge</option>
+                <option value="Paladino">Paladino</option>
+            </select>
+            <select class="level" name="level" id="level">
+                <option value="0"></option>
+                <option value="1">Level 1</option>
+                <option value="2">Level 2</option>
+                <option value="3">Level 3</option>
+                <option value="4">Level 4</option>
+                <option value="5">Level 5</option>
+                <option value="6">Level 6</option>
+                <option value="7">Level 7</option>
+                <option value="8">Level 8</option>
+                <option value="9">Level 9</option>
+                <option value="10">Level 10</option>
+                <option value="11">Level 11</option>
+                <option value="12">Level 12</option>
+                <option value="13">Level 13</option>
+                <option value="14">Level 14</option>
+                <option value="15">Level 15</option>
+                <option value="16">Level 16</option>
+                <option value="17">Level 17</option>
+                <option value="18">Level 18</option>
+                <option value="19">Level 19</option>
+                <option value="20">Level 20</option>
+            </select>
+            <select class="background" name="background" id="background">
+                <option value="0"></option>
+                <option value="Acólito">Acólito</option>
+                <option value="Artesão de Guilda">Artesão de Guilda</option>
+                <option value="Artista">Artista</option>
+                <option value="Charlatão">Charlatão</option>
+                <option value="Criminoso">Criminoso</option>
+                <option value="Eremita">Eremita</option>
+                <option value="Forasteiro">Forasteiro</option>
+                <option value="Herói do povo">Herói do povo</option>
+                <option value="Marinheiro">Marinheiro</option>
+                <option value="Nobre">Nobre</option>
+                <option value="Orfão">Orfão</option>
+                <option value="Sábio">Sábio</option>
+                <option value="Soldado">Soldado</option>
+            </select>
+            <select class="races" name="races" id="races">
+                <option value="0"></option>
+                <option value="Anão">Anão</option>
+                <option value="Elfo">Elfo</option>
+                <option value="Halfling">Halfling</option>
+                <option value="Humano">Humano</option>
+                <option value="Draconato">Draconato</option>
+                <option value="Gnomo">Gnomo</option>
+                <option value="Meio-Elfo">Meio-Elfo</option>
+                <option value="Meio-Orc">Meio-Orc</option>
+                <option value="Tiefling">Tiefling</option>
+            </select>
+            <select class="alignment" name="alignment" id="alignment">
+                <option value="0"></option>
+                <option value="Leal e Bom (LB)">Leal e Bom (LB)</option>
+                <option value="Neutro e Bom (NB)">Neutro e Bom (NB)</option>
+                <option value="Caótico e Bom (CB)">Caótico e Bom (CB)</option>
+                <option value="Leal e Neutro (LN)">Leal e Neutro (LN)</option>
+                <option value="Neutro (N)">Neutro (N)</option>
+                <option value="Caótico e Neutro (CN)">Caótico e Neutro (CN)</option>
+                <option value="Leal e Mau (LM)">Leal e Mau (LM)</option>
+                <option value="Neutro e Mau (NM)">Neutro e Mau (NM)</option>
+                <option value="Caótico e Mau (CM)">Caótico e Mau (CM)</option>
+            </select>
         </div>
         <div class="firstColumn">
+
             <div class="status">
                 <label for="strength"></label>
                 <input class="strength" type="number" id="strength" name="strength">
@@ -122,109 +123,20 @@
                 <label for="chaMod"></label>
                 <input class="chaMod" type="text" id="chaMod">
             </div>
+
             <div class="passiveWisdom">
                 <label for="passiveWisdom"></label>
                 <input class="passiveWis" type="number" id="passiveWis">
             </div>
-            <div class="inspiration">
-                <label for="inspiration"></label>
-                <input class="inspiration" type="checkbox" id="inspiration" value="false" onclick="isChecked(this)">
-            </div>
-            <div class="prBonus">
-                <label for="prBonusT"></label>
-                <input class="proficiencyBonus" type="number" id="proficiencyBonus">
-            </div>
-            <div class="savingThrows">
-                <Label for="strST"></Label>
-                <input class="check_strST" type="checkbox" id="check_strST" value="false" onclick="isChecked(this)">
-                <input class="num_strST" type="number" id="num_strST">
-                <Label for="dexST"></Label>
-                <input class="check_dexST" type="checkbox" id="check_dexST" value="false" onclick="isChecked(this)">
-                <input class="num_dexST" type="number" id="num_dexST">
-                <Label for="conST"></Label>
-                <input class="check_conST" type="checkbox" id="check_conST" value="false" onclick="isChecked(this)">
-                <input class="num_conST" type="number" id="num_conST">
-                <Label for="intST"></Label>
-                <input class="check_intST" type="checkbox" id="check_intST" value="false" onclick="isChecked(this)">
-                <input class="num_intST" type="number" id="num_intST">
-                <Label for="wisST"></Label>
-                <input class="check_wisST" type="checkbox" id="check_wisST" value="false" onclick="isChecked(this)">
-                <input class="num_wisST" type="number" id="num_wisST">
-                <Label for="chaST"></Label>
-                <input class="check_chaST" type="checkbox" id="check_chaST" value="false" onclick="isChecked(this)">
-                <input class="num_chaST" type="number" id="num_chaST">
-            </div>
-            <div class="skills">
-                <Label for="acrobatics"></Label>
-                <input class="check_acrobatics" type="checkbox" id="check_acrobatics" value="false"
-                    onclick="isChecked()">
-                <input class="num_acrobatics" type="number" id="num_acrobatics">
-                <Label for="animalHandling"></Label>
-                <input class="check_animalH" type="checkbox" id="check_animalH" value="false" onclick="isChecked(this)">
-                <input class="num_animalH" type="number" id="num_animalH">
-                <Label for="arcana"></Label>
-                <input class="check_arcana" type="checkbox" id="check_arcana" value="false" onclick="isChecked(this)">
-                <input class="num_arcana" type="number" id="num_arcana">
-                <Label for="athletics"></Label>
-                <input class="check_athletics" type="checkbox" id="check_athletics" value="false"
-                    onclick="isChecked(this)">
-                <input class="num_athletics" type="number" id="num_athletics">
-                <Label for="deception"></Label>
-                <input class="check_deception" type="checkbox" id="check_deception" value="false"
-                    onclick="isChecked(this)">
-                <input class="num_deception" type="number" id="num_deception">
-                <Label for="history"></Label>
-                <input class="check_history" type="checkbox" id="check_history" value="false" onclick="isChecked(this)">
-                <input class="num_history" type="number" id="num_history">
-                <Label for="insight"></Label>
-                <input class="check_insight" type="checkbox" id="check_insight" value="false" onclick="isChecked(this)">
-                <input class="num_insight" type="number" id="num_insight">
-                <Label for="intimidation"></Label>
-                <input class="check_intimidation" type="checkbox" id="check_intimidation" value="false"
-                    onclick="isChecked(this)">
-                <input class="num_intimidation" type="number" id="num_intimidation">
-                <Label for="investigation"></Label>
-                <input class="check_investigation" type="checkbox" id="check_investigation" value="false"
-                    onclick="isChecked(this)">
-                <input class="num_investigation" type="number" id="num_investigation">
-                <Label for="medicine"></Label>
-                <input class="check_medicine" type="checkbox" id="check_medicine" value="false"
-                    onclick="isChecked(this)">
-                <input class="num_medicine" type="number" id="num_medicine">
-                <Label for="nature"></Label>
-                <input class="check_nature" type="checkbox" id="check_nature" value="false" onclick="isChecked(this)">
-                <input class="num_nature" type="number" id="num_nature">
-                <Label for="perception"></Label>
-                <input class="check_perception" type="checkbox" id="check_perception" value="false"
-                    onclick="isChecked(this)">
-                <input class="num_perception" type="number" id="num_perception">
-                <Label for="performance"></Label>
-                <input class="check_performance" type="checkbox" id="check_performance" value="false"
-                    onclick="isChecked(this)">
-                <input class="num_performance" type="number" id="num_performance">
-                <Label for="persuasion"></Label>
-                <input class="check_persuasion" type="checkbox" id="check_persuasion" value="false"
-                    onclick="isChecked(this)">
-                <input class="num_persuasion" type="number" id="num_persuasion">
-                <Label for="religion"></Label>
-                <input class="check_religion" type="checkbox" id="check_religion" value="false"
-                    onclick="isChecked(this)">
-                <input class="num_religion" type="number" id="num_religion">
-                <Label for="sleightOfHand"></Label>
-                <input class="check_sleightOfHand" type="checkbox" id="check_sleightOfHand" value="false"
-                    onclick="isChecked(this)">
-                <input class="num_sleightOfHand" type="number" id="num_sleightOfHand">
-                <Label for="stealth"></Label>
-                <input class="check_stealth" type="checkbox" id="check_stealth" value="false" onclick="isChecked(this)">
-                <input class="num_stealth" type="number" id="num_stealth">
-                <Label for="survival"></Label>
-                <input class="check_survival" type="checkbox" id="check_survival" value="false"
-                    onclick="isChecked(this)">
-                <input class="num_survival" type="number" id="num_survival">
-            </div>
             <div class="otherPLanguages">
                 <textarea class="otherPLanguages" id="otherPLanguages" rows="12" cols="30"></textarea>
             </div>
+
+        </div>
+        <div class="prBonus">
+            <label for="prBonusT"></label>
+            <input class="proficiencyBonus" type="number" id="proficiencyBonus">
+        </div>
         </div>
         <div class="secondColumn">
             <div class="armorC">
@@ -275,29 +187,15 @@
                 <p class="pd">d</p>
                 <select class="hitDicesT" id="hitDicesT" name="hitDicesT">
                     <option value="0"></option>
-                    <option value="1">6</option>
-                    <option value="2">8</option>
-                    <option value="3">10</option>
-                    <option value="4">12</option>
+                    <option value="6">6</option>
+                    <option value="8">8</option>
+                    <option value="10">10</option>
+                    <option value="12">12</option>
                 </select>
                 <label for="hitDice"></label>
                 <input class="hitDice" type="text" id="hitDice" name="hitDice">
             </div>
-            <div class="deathS">
-                <label for="deathSaves"></label>
-                <input class="succOne" type="checkbox" id="succOne" name="succOne" value="false"
-                    onclick="isChecked(this)">
-                <input class="succTwo" type="checkbox" id="succTwo" name="succTwo" value="false"
-                    onclick="isChecked(this)">
-                <input class="succThree" type="checkbox" id="succThree" name="succThree" value="false"
-                    onclick="isChecked(this)">
-                <input class="failOne" type="checkbox" id="failOne" name="failOne" value="false"
-                    onclick="isChecked(this)">
-                <input class="failTwo" type="checkbox" id="failTwo" name="failTwo" value="false"
-                    onclick="isChecked(this)">
-                <input class="failThree" type="checkbox" id="failThree" name="failThree" value="false"
-                    onclick="isChecked(this)">
-            </div>
+
             <div class="atkspellC">
                 <label for="firstRow"></label>
                 <input class="nameFr" type="text" id="nameFr" name="nameFr">
@@ -344,11 +242,75 @@
                 <textarea class="featuresAndTraits" id="fAndT"></textarea>
             </div>
         </div>
+        <div class="checkBoxes">
+            <input class="inspiration" type="checkbox" id="inspiration" value="false" onclick="isChecked(this)">
+            <input class="check_strST" type="checkbox" id="check_strST" value="false" onclick="isChecked(this)">
+            <input class="num_strST" type="number" id="num_strST">
+            <input class="check_dexST" type="checkbox" id="check_dexST" value="false" onclick="isChecked(this)">
+            <input class="num_dexST" type="number" id="num_dexST">
+            <input class="check_conST" type="checkbox" id="check_conST" value="false" onclick="isChecked(this)">
+            <input class="num_conST" type="number" id="num_conST">
+            <input class="check_intST" type="checkbox" id="check_intST" value="false" onclick="isChecked(this)">
+            <input class="num_intST" type="number" id="num_intST">
+            <input class="check_wisST" type="checkbox" id="check_wisST" value="false" onclick="isChecked(this)">
+            <input class="num_wisST" type="number" id="num_wisST">
+            <input class="check_chaST" type="checkbox" id="check_chaST" value="false" onclick="isChecked(this)">
+            <input class="num_chaST" type="number" id="num_chaST">
+            <input class="check_acrobatics" type="checkbox" id="check_acrobatics" value="false" onclick="isChecked(this)">
+            <input class="num_acrobatics" type="number" id="num_acrobatics" >
+            <input class=" check_animalH" type="checkbox" id="check_animalH" value="false" onclick="isChecked(this)">
+            <input class="num_animalH" type="number" id="num_animalH">
+            <input class="check_arcana" type="checkbox" id="check_arcana" value="false" onclick="isChecked(this)">
+            <input class="num_arcana" type="number" id="num_arcana">
+            <input class="check_athletics" type="checkbox" id="check_athletics" value="false" onclick="isChecked(this)">
+            <input class="num_athletics" type="number" id="num_athletics">
+            <input class="check_deception" type="checkbox" id="check_deception" value="false" onclick="isChecked(this)">
+            <input class="num_deception" type="number" id="num_deception">
+            <input class="check_history" type="checkbox" id="check_history" value="false" onclick="isChecked(this)">
+            <input class="num_history" type="number" id="num_history">
+            <input class="check_insight" type="checkbox" id="check_insight" value="false" onclick="isChecked(this)">
+            <input class="num_insight" type="number" id="num_insight">
+            <input class="check_intimidation" type="checkbox" id="check_intimidation" value="false" onclick="isChecked(this)">
+            <input class="num_intimidation" type="number" id="num_intimidation">
+            <input class="check_investigation" type="checkbox" id="check_investigation" value="false" onclick="isChecked(this)">
+            <input class="num_investigation" type="number" id="num_investigation">
+            <input class="check_medicine" type="checkbox" id="check_medicine" value="false" onclick="isChecked(this)">
+            <input class="num_medicine" type="number" id="num_medicine">
+            <input class="check_nature" type="checkbox" id="check_nature" value="false" onclick="isChecked(this)">
+            <input class="num_nature" type="number" id="num_nature">
+            <input class="check_perception" type="checkbox" id="check_perception" value="false"
+                onclick="isChecked(this)">
+            <input class="num_perception" type="number" id="num_perception">
+            <input class="check_performance" type="checkbox" id="check_performance" value="false"
+                onclick="isChecked(this)">
+            <input class="num_performance" type="number" id="num_performance">
+            <input class="check_persuasion" type="checkbox" id="check_persuasion" value="false"
+                onclick="isChecked(this)">
+            <input class="num_persuasion" type="number" id="num_persuasion">
+            <input class="check_religion" type="checkbox" id="check_religion" value="false" onclick="isChecked(this)">
+            <input class="num_religion" type="number" id="num_religion">
+            <input class="check_sleightOfHand" type="checkbox" id="check_sleightOfHand" value="false"
+                onclick="isChecked(this)">
+            <input class="num_sleightOfHand" type="number" id="num_sleightOfHand">
+            <input class="check_stealth" type="checkbox" id="check_stealth" value="false" onclick="isChecked(this)">
+            <input class="num_stealth" type="number" id="num_stealth">
+            <input class="check_survival" type="checkbox" id="check_survival" value="false" onclick="isChecked(this)">
+            <input class="num_survival" type="number" id="num_survival">
+            <input class="succOne" type="checkbox" id="succOne" name="succOne" value="false" onclick="isChecked(this)">
+            <input class="succTwo" type="checkbox" id="succTwo" name="succTwo" value="false" onclick="isChecked(this)">
+            <input class="succThree" type="checkbox" id="succThree" name="succThree" value="false"
+                onclick="isChecked(this)">
+            <input class="failOne" type="checkbox" id="failOne" name="failOne" value="false" onclick="isChecked(this)">
+            <input class="failTwo" type="checkbox" id="failTwo" name="failTwo" value="false" onclick="isChecked(this)">
+            <input class="failThree" type="checkbox" id="failThree" name="failThree" value="false"
+                onclick="isChecked(this)">
+        </div>
     </form>
     <button type="submit" form="characterSheet" id="characterSubmit">SUBMIT</button>
     <button id="printBnt">PRINT</button>
     <button id="allSheet" onclick="sendSheets()">ALL SHEETS</button>
+    <script src="./jsonInt.js"></script>
 </body>
-<script src="./jsonInt.js"></script>
+
 
 </html>

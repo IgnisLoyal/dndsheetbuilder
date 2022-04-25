@@ -3,6 +3,8 @@
 const getLocalStorage = () => JSON.parse(localStorage.getItem("dbSheet")) ?? []
 const setLocalStorage = (dbSheet) => localStorage.setItem("dbSheet", JSON.stringify(dbSheet))
 
+var inputAllForm = document.querySelectorAll("select,input");
+
 //create
 const createSheet = (sheet) => {
     const dbSheet = getLocalStorage()
@@ -37,8 +39,10 @@ const isCheckHandled = (selected) => {
 }
 // fields to be filled in the form
 const saveSheet = () => {
+
     if (isValidFields()) {
         const sheet = {
+
             //toprow
             characterName: document.querySelector('#characterName').value,
             class: document.querySelector('#class').value,
@@ -160,66 +164,194 @@ const saveSheet = () => {
         console.log('ficha cadastrada')
     }
 }
-/*
+
 //row creation for each of the saved forms
-const createRow = (sheet, index) => {
+const createRow = (sheet, sheets) => {
     const newRow = document.createElement('tr')
-    newRow.innerHTML = `
+    const test = document.querySelector('tableSheet>tbody')
+    
+    const newTd = newRow.innerHTML =`
     <td>${sheet.characterName}</td>
     <td>${sheet.class}</td>
     <td>${sheet.level}</td>
     <td>
-        <button type="button" class="editButton">editar</button>
-        <button type="button" class="deleteButton" id="edit"${index}>deletar</button>
-        <button type="button" class="printButton id="delete"${index}>editar</button>
+        <button type="button" class="editButton" id="edit-${sheets}">editar</button>
+        <button type="button" class="deleteButton" id="delete-${sheets}">deletar</button>
+        <button type="button" class="printButton id="print-${sheets}">print</button>
     </td>`
-    document.querySelector('#tableSheet>body').appendChild(newRow)//1:07:06
+    for(var j = 0; j < sheet.length; j++)
+        {
+            newTd = parent.document.createElement
+        }
+
+
+    test.appendChild(newRow);
 }
+const updateTable = () => {
+    const dbSheet = readSheet()
+    dbSheet.forEach(createRow)
+}
+
 const clearTable = () => {
     const rows = document.querySelectorAll('tableSheet>body tr')
     rows.forEach(row => row.parentNode.removeChild(row))
 }
-//table update with the row creation
-const updateTable = () => {
-    const dbSheet = readSheet()
-    clearTable()
-    dbSheet.forEach(createRow)
-}
+
 //dictates which fields with be filled in the form
-const fillFields = (client) =>{
-            //toprow
-            document.querySelector('#characterName').value = sheet.characterName
-            document.querySelector('#class').value = sheet.class
-            document.querySelector('#level').value = sheet.level
-            document.querySelector('#races').value = sheet.races
-            document.querySelector('#background').value = sheet.background
-            document.querySelector('#alignment').value = sheet.alignment
-            document.querySelector('#playerName').value = sheet.playerName
-            document.querySelector('#experience').value = sheet.experience
-        }
+const fillFields = (sheet) => {
+    //toprow
+    document.querySelector('#characterName').value = sheet.characterName
+    document.querySelector('#class').value = sheet.class
+    document.querySelector('#level').value = sheet.level
+    document.querySelector('#races').value = sheet.races
+    document.querySelector('#background').value = sheet.background
+    document.querySelector('#alignment').value = sheet.alignment
+    document.querySelector('#playerName').value = sheet.playerName
+    document.querySelector('#experience').value = sheet.experience
+    //first column
+    //first status column
+    document.querySelector('#strength').value = sheet.strength
+    document.querySelector('#strMod').value = sheet.strMod
+    document.querySelector('#dexterity').value = sheet.dexterity
+    document.querySelector('#dexMod').value = sheet.dexMod
+    document.querySelector('#constitution').value = sheet.constitution
+    document.querySelector('#conMod').value = sheet.conMod
+    document.querySelector('#intelligence').value = sheet.intelligence
+    document.querySelector('#intMod').value = sheet.intMod
+    document.querySelector('#wisdom').value = sheet.wisdom
+    document.querySelector('#wisMod').value = sheet.wisMod
+    document.querySelector('#charisma').value = sheet.charisma
+    document.querySelector('#chaMod').value = sheet.chaMod
+    document.querySelector('#passiveWis').value = sheet.passiveWis
+    document.querySelector('#inspiration').value = sheet.inspiration
+    document.querySelector('#proficiencyBonus').value = sheet.proficiencyBonus
+    //second status column
+    document.querySelector('#check_strST').value = sheet.check_strST
+    document.querySelector('#num_strST').value = sheet.num_strST
+    document.querySelector('#check_dexST').value = sheet.check_dexST
+    document.querySelector('#num_dexST').value = sheet.num_dexST
+    document.querySelector('#check_conST').value = sheet.check_conST
+    document.querySelector('#num_conST').value = sheet.num_conST
+    document.querySelector('#check_intST').value = sheet.check_intST
+    document.querySelector('#num_intST').value = sheet.num_intST
+    document.querySelector('#check_wisST').value = sheet.check_wisST
+    document.querySelector('#num_wisST').value = sheet.num_wisST
+    document.querySelector('#check_chaST').value = sheet.check_chaST
+    document.querySelector('#num_chaST').value = sheet.num_chaST
+    //skills colummn
+    document.querySelector('#check_acrobatics').value = sheet.check_acrobatics
+    document.querySelector('#num_acrobatics').value = sheet.num_acrobatics
+    document.querySelector('#check_animalH').value = sheet.check_animalH
+    document.querySelector('#num_animalH').value = sheet.num_animalH
+    document.querySelector('#check_arcana').value = sheet.check_arcana
+    document.querySelector('#num_arcana').value = sheet.num_arcana
+    document.querySelector('#check_athletics').value = sheet.check_athletics
+    document.querySelector('#num_athletics').value = sheet.num_athletics
+    document.querySelector('#check_deception').value = sheet.check_deception
+    document.querySelector('#num_deception').value = sheet.num_deception
+    document.querySelector('#check_history').value = sheet.check_history
+    document.querySelector('#num_history').value = sheet.num_history
+    document.querySelector('#check_insight').value = sheet.check_insight
+    document.querySelector('#num_insight').value = sheet.num_insight
+    document.querySelector('#check_intimidation').value = sheet.check_intimidation
+    document.querySelector('#num_intimidation').value = sheet.num_intimidation
+    document.querySelector('#check_investigation').value = sheet.check_investigation
+    document.querySelector('#num_investigation').value = sheet.num_investigation
+    document.querySelector('#check_medicine').value = sheet.check_medicine
+    document.querySelector('#num_medicine').value = sheet.num_medicine
+    document.querySelector('#check_nature').value = sheet.check_nature
+    document.querySelector('#num_nature').value = sheet.num_nature
+    document.querySelector('#check_perception').value = sheet.check_perception
+    document.querySelector('#num_perception').value = sheet.num_perception
+    document.querySelector('#check_performance').value = sheet.check_performance
+    document.querySelector('#num_performance').value = sheet.num_performanc
+    document.querySelector('#check_persuasion').value = sheet.check_persuasion
+    document.querySelector('#num_persuasion').value = sheet.num_persuasion
+    document.querySelector('#check_religion').value = sheet.check_religion
+    document.querySelector('#num_religion').value = sheet.num_religion
+    document.querySelector('#check_sleightOfHand').value = sheet.check_sleightOfHand
+    document.querySelector('#num_sleightOfHand').value = sheet.num_sleightOfHand
+    document.querySelector('#check_stealth').value = sheet.check_stealth
+    document.querySelector('#num_stealth').value = sheet.num_stealth
+    document.querySelector('#check_survival').value = sheet.check_survival
+    document.querySelector('#num_survival').value = sheet.num_survival
+    document.querySelector('#otherPLanguages').value = sheet.otherPLanguages
+    //second column
+    document.querySelector('#armorClass').value = sheet.armorClass
+    document.querySelector('#initiative').value = sheet.initiative
+    document.querySelector('#speed').value = sheet.speed
+    document.querySelector('#hitpointM').value = sheet.hitpointM
+    document.querySelector('#hitpointA').value = sheet.hitpointA
+    document.querySelector('#hitpointT').value = sheet.hitpointT
+    document.querySelector('#hitDLevel').value = sheet.hitDLevel
+    document.querySelector('#hitDicesT').value = sheet.hitDicesT
+    document.querySelector('#hitDice').value = sheet.hitDice
+    document.querySelector('#succOne').value = sheet.succOne
+    document.querySelector('#succTwo').value = sheet.succTwo
+    document.querySelector('#succThree').value = sheet.succThree
+    document.querySelector('#failOne').value = sheet.failOne
+    document.querySelector('#failTwo').value = sheet.failTwo
+    document.querySelector('#failThree').value = sheet.failThree
+    document.querySelector('#nameFr').value = sheet.nameFr
+    document.querySelector('#atkFr').value = sheet.atkFr
+    document.querySelector('#typeFr').value = sheet.typeFr
+    document.querySelector('#nameSr').value = sheet.nameSr
+    document.querySelector('#atkSr').value = sheet.atkSr
+    document.querySelector('#typeSr').value = sheet.typeSr
+    document.querySelector('#nameTr').value = sheet.nameTr
+    document.querySelector('#atkTr').value = sheet.atkTr
+    document.querySelector('#typeTr').value = sheet.typeTr
+    document.querySelector('#atkSpellText').value = sheet.atkSpellText
+    //coins
+    document.querySelector('#copperP').value = sheet.copperP
+    document.querySelector('#silverP').value = sheet.silverP
+    document.querySelector('#electrumP').value = sheet.electrumP
+    document.querySelector('#goldP').value = sheet.goldP
+    document.querySelector('#platinumP').value = sheet.platinumP
+    document.querySelector('#equipText').value = sheet.equipText
+    //third column
+    document.querySelector('#pTraits').value = sheet.pTraits
+    document.querySelector('#idealsD').value = sheet.idealsD
+    document.querySelector('#bondsD').value = sheet.bondsD
+    document.querySelector('#flawsD').value = sheet.flawsD
+    document.querySelector('#fAndT').value = sheet.fAndT
+    document.querySelector('#characterName').dataset.index = sheet.index
 
-const editSheet = (index) => {
-    const sheet = readSheet()
-    fillFields(client)
 }
-
+const editSheet = (sheets) => {
+    const sheet = readSheet()[sheets]
+    sheet.sheets = sheets
+    filldFields(sheet)
+}
 const editDelete = (event) => {
-    if (event, target, type == 'button') {
-        const [action, index] = event.target.id.splice('-')
+    if (event.target.type == 'button') {
+        const [action, sheets] = event.target.id.split('-')
 
         if (action == 'edit') {
             editSheet(index)
         } else {
-            
+            const sheet = readSheet()[sheets]
+            const response = confirm('Deseja realmente excluir a ficha $(sheet.characterName)')
+            if (response) {
+                deleteSheet(sheets)
+                updateTable()
+            }
+
         }
     }
 
 }
 
-updateTable() */
+
+
 // set the value of the checkboxes in the form
 function isChecked(el) {
-    document.querySelector('input[type = checkbox]').value = true
+    var checkO = document.querySelector('.form ,input[type=checkbox]');
+    var checkA = document.querySelectorAll('.form ,input[type=checkbox]');
+
+    checkA.forEach(checkO => checkO.addEventListener("input", () => {
+        checkO.value = true;
+    }))
 }
 
 function sendHome() {
@@ -229,10 +361,9 @@ function sendSheets() {
     window.location = 'sheets.html'
 }
 
+
+updateTable()
 //Events
 //Save interaction with the form
-document.querySelector('#characterSubmit').addEventListener('click', saveSheet)
-//edit button
-//document.querySelector('#tableSheet>body').addEventListener('click', editDelete)
-
+document.querySelector('#characterSubmit').addEventListener('click', saveSheet);
 //finish last section
