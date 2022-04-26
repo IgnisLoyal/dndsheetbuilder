@@ -3,7 +3,7 @@
 const getLocalStorage = () => JSON.parse(localStorage.getItem("dbSheet")) ?? []
 const setLocalStorage = (dbSheet) => localStorage.setItem("dbSheet", JSON.stringify(dbSheet))
 
-var inputAllForm = document.querySelectorAll("select,input");
+//var inputAllForm = document.querySelectorAll("select,input");
 
 //create
 const createSheet = (sheet) => {
@@ -164,13 +164,11 @@ const saveSheet = () => {
         console.log('ficha cadastrada')
     }
 }
-
 //row creation for each of the saved forms
-const createRow = (sheet, sheets) => {
+export const createRow = (sheet, sheets) => {
+    //const tb = document.getElementById('#tableSheet>tbody')
     const newRow = document.createElement('tr')
-    const test = document.querySelector('tableSheet>tbody')
-    
-    const newTd = newRow.innerHTML =`
+    newRow.innerHTML = `
     <td>${sheet.characterName}</td>
     <td>${sheet.class}</td>
     <td>${sheet.level}</td>
@@ -179,14 +177,11 @@ const createRow = (sheet, sheets) => {
         <button type="button" class="deleteButton" id="delete-${sheets}">deletar</button>
         <button type="button" class="printButton id="print-${sheets}">print</button>
     </td>`
-    for(var j = 0; j < sheet.length; j++)
-        {
-            newTd = parent.document.createElement
-        }
-
-
-    test.appendChild(newRow);
+    //tb.innerHTML += tbo.newRow;
+    document.querySelector('#tableSheet>tbody').appendChild(newRow);
+    //document.getElementById("lineForm").innerHTML += document.getElementById("lineForm").newRow;
 }
+
 const updateTable = () => {
     const dbSheet = readSheet()
     dbSheet.forEach(createRow)
@@ -318,6 +313,7 @@ const fillFields = (sheet) => {
     document.querySelector('#characterName').dataset.index = sheet.index
 
 }
+
 const editSheet = (sheets) => {
     const sheet = readSheet()[sheets]
     sheet.sheets = sheets
