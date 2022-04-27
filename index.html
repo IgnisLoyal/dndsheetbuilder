@@ -3,10 +3,10 @@
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Quick Sheet builder</title>
-    
+
     <link rel="stylesheet" href="./css/bootstrap.min.css">
     <link rel="stylesheet" href="./css/stylednd.css">
-z
+
 </head>
 
 <body>
@@ -258,8 +258,9 @@ z
             <input class="num_wisST" type="number" id="num_wisST">
             <input class="check_chaST" type="checkbox" id="check_chaST" value="false" onclick="isChecked(this)">
             <input class="num_chaST" type="number" id="num_chaST">
-            <input class="check_acrobatics" type="checkbox" id="check_acrobatics" value="false" onclick="isChecked(this)">
-            <input class="num_acrobatics" type="number" id="num_acrobatics" >
+            <input class="check_acrobatics" type="checkbox" id="check_acrobatics" value="false"
+                onclick="isChecked(this)">
+            <input class="num_acrobatics" type="number" id="num_acrobatics">
             <input class=" check_animalH" type="checkbox" id="check_animalH" value="false" onclick="isChecked(this)">
             <input class="num_animalH" type="number" id="num_animalH">
             <input class="check_arcana" type="checkbox" id="check_arcana" value="false" onclick="isChecked(this)">
@@ -272,9 +273,11 @@ z
             <input class="num_history" type="number" id="num_history">
             <input class="check_insight" type="checkbox" id="check_insight" value="false" onclick="isChecked(this)">
             <input class="num_insight" type="number" id="num_insight">
-            <input class="check_intimidation" type="checkbox" id="check_intimidation" value="false" onclick="isChecked(this)">
+            <input class="check_intimidation" type="checkbox" id="check_intimidation" value="false"
+                onclick="isChecked(this)">
             <input class="num_intimidation" type="number" id="num_intimidation">
-            <input class="check_investigation" type="checkbox" id="check_investigation" value="false" onclick="isChecked(this)">
+            <input class="check_investigation" type="checkbox" id="check_investigation" value="false"
+                onclick="isChecked(this)">
             <input class="num_investigation" type="number" id="num_investigation">
             <input class="check_medicine" type="checkbox" id="check_medicine" value="false" onclick="isChecked(this)">
             <input class="num_medicine" type="number" id="num_medicine">
@@ -310,7 +313,39 @@ z
     </form>
     <button type="submit" form="characterSheet" id="characterSubmit">SUBMIT</button>
     <button id="printBnt">PRINT</button>
-    <button id="allSheet" onclick="sendSheets()">ALL SHEETS</button>
+       <!-- Button trigger modal -->
+       <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+        All Sheets
+    </button>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">All Sheets</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <table id="tableSheet" class="records">
+                        <thead>
+                            <tr>
+                                <th>Character name</th>
+                                <th>Class</th>
+                                <th>Level</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            
+                        </tbody>
+                    </table>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
     <script src="./js/bootstrap.min.js"></script>
     <script src="./js/jsonInt.js"></script>
 </body>

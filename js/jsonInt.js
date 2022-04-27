@@ -161,35 +161,9 @@ const saveSheet = () => {
             fAndT: document.querySelector('#fAndT').value
         }
         createSheet(sheet)
+        updateTable()
         console.log('ficha cadastrada')
     }
-}
-//row creation for each of the saved forms
-export const createRow = (sheet, sheets) => {
-    //const tb = document.getElementById('#tableSheet>tbody')
-    const newRow = document.createElement('tr')
-    newRow.innerHTML = `
-    <td>${sheet.characterName}</td>
-    <td>${sheet.class}</td>
-    <td>${sheet.level}</td>
-    <td>
-        <button type="button" class="editButton" id="edit-${sheets}">editar</button>
-        <button type="button" class="deleteButton" id="delete-${sheets}">deletar</button>
-        <button type="button" class="printButton id="print-${sheets}">print</button>
-    </td>`
-    //tb.innerHTML += tbo.newRow;
-    document.querySelector('#tableSheet>tbody').appendChild(newRow);
-    //document.getElementById("lineForm").innerHTML += document.getElementById("lineForm").newRow;
-}
-
-const updateTable = () => {
-    const dbSheet = readSheet()
-    dbSheet.forEach(createRow)
-}
-
-const clearTable = () => {
-    const rows = document.querySelectorAll('tableSheet>body tr')
-    rows.forEach(row => row.parentNode.removeChild(row))
 }
 
 //dictates which fields with be filled in the form
@@ -311,35 +285,54 @@ const fillFields = (sheet) => {
     document.querySelector('#flawsD').value = sheet.flawsD
     document.querySelector('#fAndT').value = sheet.fAndT
     document.querySelector('#characterName').dataset.index = sheet.index
+}
+//row creation for each of the saved forms
+const createRow = (sheet, index) => {
+    const newRow = document.createElement('tr')
+    newRow.innerHTML = `
+    <td>${sheet.characterName}</td>
+    <td>${sheet.class}</td>
+    <td>${sheet.level}</td>
+    <td>
+        <button type="button" class="editButton" id="edit-${index}">editar</button>
+        <button type="button" class="deleteButton" id="delete-${index}">deletar</button>
+        <button type="button" class="printButton id="print-${index}">print</button>
+    </td>`
+    document.querySelector('#tableSheet>tbody').appendChild(newRow);
+}
+const updateTable = () => {
+    const dbSheet = readSheet()
+    clearTable()
+    dbSheet.forEach(createRow)
+    clearTable()
 
 }
-
-const editSheet = (sheets) => {
-    const sheet = readSheet()[sheets]
-    sheet.sheets = sheets
-    filldFields(sheet)
+const clearTable = () => {
+    const rows = document.querySelectorAll('tableSheet>body tr')
+    rows.forEach(row => row.parentNode.removeChild(row))
+}
+const editSheet = (index) => {
+    const sheet = readSheet()[index]
+    sheet.index = index
+    fillFields(sheet)
 }
 const editDelete = (event) => {
     if (event.target.type == 'button') {
-        const [action, sheets] = event.target.id.split('-')
+        const [action, index] = event.target.id.split('-');
 
         if (action == 'edit') {
             editSheet(index)
+            console.log(action)
         } else {
-            const sheet = readSheet()[sheets]
-            const response = confirm('Deseja realmente excluir a ficha $(sheet.characterName)')
+            const sheet = readSheet()[index]
+            const response = confirm(`Deseja realmente excluir a ficha ${sheet.characterName}?`)
             if (response) {
-                deleteSheet(sheets)
+                deleteSheet(index)
                 updateTable()
             }
-
         }
     }
-
 }
-
-
-
 // set the value of the checkboxes in the form
 function isChecked(el) {
     var checkO = document.querySelector('.form ,input[type=checkbox]');
@@ -353,13 +346,9 @@ function isChecked(el) {
 function sendHome() {
     window.location = 'index.html'
 }
-function sendSheets() {
-    window.location = 'sheets.html'
-}
-
-
 updateTable()
 //Events
 //Save interaction with the form
 document.querySelector('#characterSubmit').addEventListener('click', saveSheet);
+document.querySelector('#tableSheet>tbody').addEventListener('click', editDelete)
 //finish last section
