@@ -13,6 +13,7 @@ const createSheet = (sheet) => {
 }
 //read
 const readSheet = (sheet) => getLocalStorage()
+//realiza o fechamento
 
 //update
 const updateSheet = (index, sheet) => {
@@ -233,7 +234,7 @@ const fillFields = (sheet) => {
     document.querySelector('#check_perception').value = sheet.check_perception
     document.querySelector('#num_perception').value = sheet.num_perception
     document.querySelector('#check_performance').value = sheet.check_performance
-    document.querySelector('#num_performance').value = sheet.num_performanc
+    document.querySelector('#num_performance').value = sheet.num_performance
     document.querySelector('#check_persuasion').value = sheet.check_persuasion
     document.querySelector('#num_persuasion').value = sheet.num_persuasion
     document.querySelector('#check_religion').value = sheet.check_religion
@@ -300,15 +301,9 @@ const createRow = (sheet, index) => {
     </td>`
     document.querySelector('#tableSheet>tbody').appendChild(newRow);
 }
-const updateTable = () => {
-    const dbSheet = readSheet()
-    clearTable()
-    dbSheet.forEach(createRow)
-    clearTable()
 
-}
 const clearTable = () => {
-    const rows = document.querySelectorAll('tableSheet>body tr')
+    const rows = document.querySelectorAll('#tableSheet>tbody tr')
     rows.forEach(row => row.parentNode.removeChild(row))
 }
 const editSheet = (index) => {
@@ -316,13 +311,17 @@ const editSheet = (index) => {
     sheet.index = index
     fillFields(sheet)
 }
+const updateTable = () => {
+    const dbSheet = readSheet()
+    clearTable()
+    dbSheet.forEach(createRow)
+}
 const editDelete = (event) => {
     if (event.target.type == 'button') {
         const [action, index] = event.target.id.split('-');
 
         if (action == 'edit') {
             editSheet(index)
-            console.log(action)
         } else {
             const sheet = readSheet()[index]
             const response = confirm(`Deseja realmente excluir a ficha ${sheet.characterName}?`)
@@ -333,6 +332,7 @@ const editDelete = (event) => {
         }
     }
 }
+updateTable()
 // set the value of the checkboxes in the form
 function isChecked(el) {
     var checkO = document.querySelector('.form ,input[type=checkbox]');
@@ -346,7 +346,7 @@ function isChecked(el) {
 function sendHome() {
     window.location = 'index.html'
 }
-updateTable()
+
 //Events
 //Save interaction with the form
 document.querySelector('#characterSubmit').addEventListener('click', saveSheet);
