@@ -3,8 +3,6 @@
 const getLocalStorage = () => JSON.parse(localStorage.getItem("dbSheet")) ?? []
 const setLocalStorage = (dbSheet) => localStorage.setItem("dbSheet", JSON.stringify(dbSheet))
 
-//var inputAllForm = document.querySelectorAll("select,input");
-
 //create
 const createSheet = (sheet) => {
     const dbSheet = getLocalStorage()
@@ -161,9 +159,16 @@ const saveSheet = () => {
             flawsD: document.querySelector('#flawsD').value,
             fAndT: document.querySelector('#fAndT').value
         }
-        createSheet(sheet)
-        updateTable()
-        console.log('ficha cadastrada')
+        const index = document.getElementById('characterName').dataset.index
+        if (index == 'new') {
+            createSheet(sheet)
+            updateTable()
+            console.log('ficha cadastrada')
+        } else {
+            updateSheet(index, sheet)
+            updateTable()
+        }
+
     }
 }
 
@@ -295,7 +300,7 @@ const createRow = (sheet, index) => {
     <td>${sheet.class}</td>
     <td>${sheet.level}</td>
     <td>
-        <button type="button" class="editButton" id="edit-${index}">editar</button>
+        <button type="button" class="editButton" data-bs-dismiss="modal" aria-label="Close" id="edit-${index}">editar</button>
         <button type="button" class="deleteButton" id="delete-${index}">deletar</button>
         <button type="button" class="printButton id="print-${index}">print</button>
     </td>`
@@ -310,6 +315,7 @@ const editSheet = (index) => {
     const sheet = readSheet()[index]
     sheet.index = index
     fillFields(sheet)
+    closeModal()
 }
 const updateTable = () => {
     const dbSheet = readSheet()
@@ -322,6 +328,7 @@ const editDelete = (event) => {
 
         if (action == 'edit') {
             editSheet(index)
+            
         } else {
             const sheet = readSheet()[index]
             const response = confirm(`Deseja realmente excluir a ficha ${sheet.characterName}?`)
