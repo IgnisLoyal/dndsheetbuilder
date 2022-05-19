@@ -291,6 +291,7 @@ const fillFields = (sheet) => {
     document.querySelector('#flawsD').value = sheet.flawsD
     document.querySelector('#fAndT').value = sheet.fAndT
     document.querySelector('#characterName').dataset.index = sheet.index
+    isFormcheck(el)
 }
 //row creation for each of the saved forms
 const createRow = (sheet, index) => {
@@ -315,7 +316,6 @@ const editSheet = (index) => {
     const sheet = readSheet()[index]
     sheet.index = index
     fillFields(sheet)
-    closeModal()
 }
 const updateTable = () => {
     const dbSheet = readSheet()
@@ -349,7 +349,14 @@ function isChecked(el) {
         checkO.value = true;
     }))
 }
+function isFormcheck(el) {
+    var checkO = document.querySelector('.form ,input[type=checkbox]');
+    var checkA = document.querySelectorAll('.form ,input[type=checkbox]');
 
+    checkA.forEach(checkO => checkO.addEventListener("input", () => {
+        checkO.checked = true;
+    }))
+}
 function sendHome() {
     window.location = 'index.html'
 }
